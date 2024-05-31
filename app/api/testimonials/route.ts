@@ -14,7 +14,10 @@ export async function GET(request: NextRequest) {
         },
       }
     )
-    return NextResponse.json(response.data)
+
+    const res = NextResponse.json(response.data)
+
+    return res
   } catch (error) {
     console.error(error)
     return NextResponse.json(
