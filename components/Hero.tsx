@@ -1,5 +1,3 @@
-"use client"
-
 import { heroContent } from "@/data"
 import VideoIcon from "./ui/VideoIcon"
 import VideoDescription from "./ui/VideoDescription"
@@ -17,66 +15,66 @@ const Hero = () => {
   const statsRef = useRef<HTMLUListElement>(null)
   const buttonRef = useRef<HTMLAnchorElement>(null)
 
-  useEffect(() => {
-    // hide by deflault video, video description 1 and 2, title, description, stats, button using y: 30, opacity: 0
+  // useEffect(() => {
+  //   // hide by deflault video, video description 1 and 2, title, description, stats, button using y: 30, opacity: 0
 
-    gsap.set(videoRef.current, { y: 30, opacity: 0 })
-    gsap.set(videoDescription1.current, { opacity: 0 })
-    gsap.set(videoDescription2.current, { opacity: 0 })
-    gsap.set(titleRef.current, { y: 30, opacity: 0 })
-    gsap.set(descriptionRef.current, { y: 30, opacity: 0 })
-    gsap.set(statsRef.current, { y: 30, opacity: 0 })
-    gsap.set(buttonRef.current, { y: 30, opacity: 0 })
+  //   gsap.set(videoRef.current, { y: 30, opacity: 0 })
+  //   gsap.set(videoDescription1.current, { opacity: 0 })
+  //   gsap.set(videoDescription2.current, { opacity: 0 })
+  //   gsap.set(titleRef.current, { y: 30, opacity: 0 })
+  //   gsap.set(descriptionRef.current, { y: 30, opacity: 0 })
+  //   gsap.set(statsRef.current, { y: 30, opacity: 0 })
+  //   gsap.set(buttonRef.current, { y: 30, opacity: 0 })
 
-    // animate video, video description 1 and 2, title, description, stats, button using y: 0, opacity: 1 when loaded with delay .2s
+  //   // animate video, video description 1 and 2, title, description, stats, button using y: 0, opacity: 1 when loaded with delay .2s
 
-    gsap.to(videoRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 0.8,
-    })
+  //   gsap.to(videoRef.current, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 0.8,
+  //   })
 
-    gsap.to(videoDescription1.current, {
-      opacity: 1,
-      duration: 1,
-      delay: 1,
-    })
+  //   gsap.to(videoDescription1.current, {
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1,
+  //   })
 
-    gsap.to(videoDescription2.current, {
-      opacity: 1,
-      duration: 1,
-      delay: 1,
-    })
+  //   gsap.to(videoDescription2.current, {
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1,
+  //   })
 
-    gsap.to(titleRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 1.2,
-    })
+  //   gsap.to(titleRef.current, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1.2,
+  //   })
 
-    gsap.to(descriptionRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 1.4,
-    })
+  //   gsap.to(descriptionRef.current, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1.4,
+  //   })
 
-    gsap.to(statsRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 1.6,
-    })
+  //   gsap.to(statsRef.current, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1.6,
+  //   })
 
-    gsap.to(buttonRef.current, {
-      y: 0,
-      opacity: 1,
-      duration: 1,
-      delay: 1.8,
-    })
-  }, [])
+  //   gsap.to(buttonRef.current, {
+  //     y: 0,
+  //     opacity: 1,
+  //     duration: 1,
+  //     delay: 1.8,
+  //   })
+  // }, [])
 
   return (
     <header className="flex flex-col justify-center items-center text-center overflow-hidden max-w-[48rem] lg:h-[100dvh] xs:h-auto lg:max-h-[53.125rem] xs:max-h-none mx-auto sm:px-5 xs:px-4 sm:pb-5xl lg:pb-[12svh] xs:pb-[12.44rem] lg:pt-[14svh] sm:pt-[12.5rem] xs:pt-[9.75rem]">
