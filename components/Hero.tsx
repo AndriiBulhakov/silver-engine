@@ -2,18 +2,17 @@ import { heroContent } from "@/data"
 import VideoIcon from "./ui/VideoIcon"
 import VideoDescription from "./ui/VideoDescription"
 import Video from "./ui/Video"
-import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { gsap } from "gsap"
 
 const Hero = () => {
-  const videoRef = useRef<HTMLDivElement>(null)
-  const videoDescription1 = useRef<HTMLDivElement>(null)
-  const videoDescription2 = useRef<HTMLDivElement>(null)
-  const titleRef = useRef<HTMLHeadingElement>(null)
-  const descriptionRef = useRef<HTMLParagraphElement>(null)
-  const statsRef = useRef<HTMLUListElement>(null)
-  const buttonRef = useRef<HTMLAnchorElement>(null)
+  // const videoRef = useRef<HTMLDivElement>(null)
+  // const videoDescription1 = useRef<HTMLDivElement>(null)
+  // const videoDescription2 = useRef<HTMLDivElement>(null)
+  // const titleRef = useRef<HTMLHeadingElement>(null)
+  // const descriptionRef = useRef<HTMLParagraphElement>(null)
+  // const statsRef = useRef<HTMLUListElement>(null)
+  // const buttonRef = useRef<HTMLAnchorElement>(null)
 
   // useEffect(() => {
   //   // hide by deflault video, video description 1 and 2, title, description, stats, button using y: 30, opacity: 0
@@ -79,17 +78,14 @@ const Hero = () => {
   return (
     <header className="flex flex-col justify-center items-center text-center overflow-hidden max-w-[48rem] lg:h-[100dvh] xs:h-auto lg:max-h-[53.125rem] xs:max-h-none mx-auto sm:px-5 xs:px-4 sm:pb-5xl lg:pb-[12svh] xs:pb-[12.44rem] lg:pt-[14svh] sm:pt-[12.5rem] xs:pt-[9.75rem]">
       <div className="flex justify-center gap-3 text-left text-xs lg:mb-10 sm:mb-[8.69rem] xs:mb-[4rem] sm:h-[15.6rem] sm:w-[14.5rem] xs:w-[9.875rem] xs:h-[10.625rem] relative">
-        <div
-          ref={videoDescription1}
-          className="video-description md:flex flex-col gap-2 self-end xs:hidden sm:mb-[1.56rem] xs:mb-0 absolute sm:left-[-0.75rem] xs:left-[1rem] sm:translate-x-[-100%] sm:translate-y-0 xs:translate-y-[100%] xs:translate-x-[-50%] tracking-[-0.015rem] max-w-[11.0625rem] w-full text-gray-primary"
-        >
+        <div className="video-description md:flex flex-col gap-2 self-end xs:hidden sm:mb-[1.56rem] xs:mb-0 absolute sm:left-[-0.75rem] xs:left-[1rem] sm:translate-x-[-100%] sm:translate-y-0 xs:translate-y-[100%] xs:translate-x-[-50%] tracking-[-0.015rem] max-w-[11.0625rem] w-full text-gray-primary">
           <VideoDescription
             src={heroContent.videoIcon1}
             title={heroContent.videoTitle1}
             description={heroContent.videoDescription1}
           />
         </div>
-        <div ref={videoRef} className="relative w-full z-[-1] self-stretch">
+        <div className="relative w-full z-[-1] self-stretch">
           <VideoIcon
             color="bg-white-background"
             className="absolute top-[1.38rem] right-[1.38rem] z-10"
@@ -119,10 +115,7 @@ const Hero = () => {
             src="/assets/video/Hero-2.mp4"
           />
         </div>
-        <div
-          ref={videoDescription2}
-          className="video-description md:flex flex-col gap-2 xs:hidden mt-[1.56rem] right-[-3.38rem] absolute translate-x-[100%] tracking-[-0.015rem] max-w-[11.0625rem] text-gray-primary"
-        >
+        <div className="video-description md:flex flex-col gap-2 xs:hidden mt-[1.56rem] right-[-3.38rem] absolute translate-x-[100%] tracking-[-0.015rem] max-w-[11.0625rem] text-gray-primary">
           <VideoDescription
             src={heroContent.videoIcon2}
             title={heroContent.videoTitle2}
@@ -130,30 +123,18 @@ const Hero = () => {
           />
         </div>
       </div>
-      <h1 ref={titleRef} className="text-headlines/h1 mb-6">
-        {heroContent.title}
-      </h1>
-      <div
-        ref={descriptionRef}
-        className="text-body/large text-gray-quaternary max-w-[27.375rem]"
-      >
+      <h1 className="text-headlines/h1 mb-6">{heroContent.title}</h1>
+      <div className="text-body/large text-gray-quaternary max-w-[27.375rem]">
         {heroContent.description}
       </div>
-      <ul
-        ref={statsRef}
-        className="hero-stats flex justify-center lg:my-8 sm:my-16 xs:my-8"
-      >
+      <ul className="hero-stats flex justify-center lg:my-8 sm:my-16 xs:my-8">
         {heroContent.stats.map((stat) => (
           <li key={stat.id} className="px-5 border-r border-gray-primary/10">
             {stat.value}
           </li>
         ))}
       </ul>
-      <a
-        ref={buttonRef}
-        href={heroContent.button.href}
-        className="btn btn-secondary"
-      >
+      <a href={heroContent.button.href} className="btn btn-secondary">
         {heroContent.button.text}
       </a>
     </header>
