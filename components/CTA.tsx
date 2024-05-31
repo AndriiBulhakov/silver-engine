@@ -3,7 +3,7 @@ import Image from "next/image"
 const CTA = () => {
   return (
     <section className="pt-28 sm:px-5 xs:px-4 pb-4">
-      <div className="mentions-wrapper lg:pt-[6.31rem] lg:pb-[25.5rem] lg:pl-[6.37rem] sm:px-12 sm:pt-12 xs:pt-8 xs:pl-9 xs:pr-8 rounded-[2rem] overflow-hidden relative">
+      <div className="lg:pt-[6.31rem] lg:pb-[25.5rem] lg:pl-[6.37rem] sm:px-12 sm:pt-12 xs:pt-8 xs:pl-9 xs:pr-8 rounded-[2rem] overflow-hidden relative">
         <div className="flex flex-col gap-12 relative z-10">
           <p className="text-body/medium text-white-tetriary opacity-80">
             Go Hired Easily!
@@ -16,7 +16,14 @@ const CTA = () => {
             Get Started
           </a>
         </div>
-
+        <Image
+          src="/assets/images/mentions-bg.webp"
+          alt="CTA Background"
+          loading="lazy"
+          className="absolute top-0 right-0 left-0 bottom-0 min-w-[100%] min-h-[100%] object-cover max-w-none"
+          width={1083}
+          height={718}
+        />
         <div className="lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:left-0 lg:h-auto sm:h-[48rem] xs:h-[27rem]">
           <Image
             src="/assets/images/sticky-tabs/cta-1.webp"

@@ -5,6 +5,7 @@ import { useEffect, useState, useRef } from "react"
 import axios from "axios"
 import Carousel from "./ui/Carousel"
 import { EmblaOptionsType } from "embla-carousel"
+import Image from "next/image"
 
 interface Mention {
   id: string
@@ -75,7 +76,7 @@ const Mentions = () => {
 
   return (
     <section className="sm:px-5 xs:px-4">
-      <div className="mentions-wrapper py-[5.5rem] rounded-[2rem] overflow-hidden flex flex-col items-center gap-20">
+      <div className="relative py-[5.5rem] rounded-[2rem] overflow-hidden flex flex-col items-center gap-20">
         <SectionsHeader
           title="Groundbreaking innovation for interviewees, as featured on"
           subtitle="We're Humble to Mention"
@@ -87,6 +88,14 @@ const Mentions = () => {
           slides={mentionsSlides}
           gap={57}
           stopOnHover={true}
+        />
+        <Image
+          src="/assets/images/mentions-bg.webp"
+          alt="CTA Background"
+          loading="lazy"
+          className="absolute top-0 right-0 left-0 bottom-0 min-w-[100%] min-h-[100%] object-cover max-w-none"
+          width={1083}
+          height={718}
         />
       </div>
     </section>
