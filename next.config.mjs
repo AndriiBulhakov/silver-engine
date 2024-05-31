@@ -18,10 +18,6 @@ const nextConfig = {
             key: "Access-Control-Allow-Headers",
             value: "*",
           },
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=9999999999, must-revalidate',
-          }
         ],
       },
     ];

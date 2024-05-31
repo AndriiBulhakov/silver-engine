@@ -14,7 +14,11 @@ export async function GET(request: NextRequest) {
         },
       }
     )
-    return NextResponse.json(response.data)
+
+    const res = NextResponse.json(response.data)
+    res.headers.set("Cache-Control", "s-maxage=60, stale-while-revalidate")
+
+    return res
   } catch (error) {
     console.error(error)
     return NextResponse.json(
